@@ -135,31 +135,33 @@ class Calculator extends React.Component {
     const { history, value, result } = this.state;
     return (
       <Block safe flex color="white">
-        <Block flex borderWidth={0.3}>
-          <Block flex color={"#AAFC4C"}>
-            <Block row space={"between"}>
-              {result !== "" && history !== "" && (
-                <>
-                  <Text h2 bold>
-                    {history} =
-                  </Text>
-                  <Text h2 bold>
-                    {result}
-                  </Text>
-                </>
-              )}
+        <Block margin={0.3}>
+          <Block flex borderWidth={0.1}>
+            <Block flex color={"#AAFC4C"}>
+              <Block row space={"between"}>
+                {result !== "" && history !== "" && (
+                  <>
+                    <Text h2 bold>
+                      {history} =
+                    </Text>
+                    <Text h2 bold>
+                      {result}
+                    </Text>
+                  </>
+                )}
+              </Block>
+            </Block>
+            <Block flex middle>
+              <Text h1 bold right>
+                {value}
+              </Text>
             </Block>
           </Block>
-          <Block flex middle>
-            <Text h1 bold right>
-              {value}
-            </Text>
+          <Block flex={3} margin>
+            <FlatList data={buttons} renderItem={this.render_line} />
           </Block>
+          <StatusBar style="light" animated={true} />
         </Block>
-        <Block flex={3} margin>
-          <FlatList data={buttons} renderItem={this.render_line} />
-        </Block>
-        <StatusBar style="light" animated={true} />
       </Block>
     );
   }
