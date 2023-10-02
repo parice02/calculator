@@ -1,11 +1,18 @@
 {
   "expo": {
-    "name": "calculator",
+    "name": "Simple Calculator",
     "slug": "calculator",
-    "version": "1.0.0",
+    "version": "0.0.1",
+    "jsEngine": "hermes",
     "orientation": "portrait",
+    "privacy": "hidden",
+    "owner": "parice02",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -18,13 +25,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "2023.1.0",
+      "bundleIdentifier": "bf.parice02.calculator"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "bf.parice02.calculator",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
